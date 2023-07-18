@@ -1,0 +1,40 @@
+%flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+%itemCenter {
+  display: flex;
+  align-items: center;
+}
+
+%flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%gridCenter {
+  display: grid;
+  place-items: center;
+}
+
+%titleFontSize {
+  text-align: center;
+  line-height: 45px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+%subTitleFontsAndBottomStyle {
+  text-align: center;
+  font-weight: 500;
+  line-height: 20px;
+  color: $black-500;
+}

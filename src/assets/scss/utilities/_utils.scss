@@ -1,0 +1,218 @@
+/* ------------------- */
+/* Colors Start        */
+/* ------------------- */
+$colors: (
+  "black": (
+    200: hsl(0, 0%, 93%),
+    400: hsl(0, 0%, 75%),
+    500: hsl(0, 0%, 50%),
+    600: hsl(0, 0%, 31%),
+    700: hsl(0, 0%, 20%),
+    800: hsl(330, 3%, 15%),
+    900: hsl(0, 0%, 7%),
+  ),
+);
+
+// @each key, value in $colors
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .bg-#{$color}-#{$shade} {
+      background: $value;
+    }
+  }
+}
+
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .text-#{$color}-#{$shade} {
+      color: $value;
+    }
+  }
+}
+
+$red: hsl(0, 82%, 51%);
+$lightRed: hsl(0, 99%, 62%);
+$darkRed: hsl(0, 100%, 31%);
+$yellow: hsl(44, 100%, 50%);
+$lightGreen: hsl(129, 43%, 55%);
+
+.bg-red {
+  background: $red;
+}
+
+.bg-lightRed {
+  background: $lightRed;
+}
+
+.bg-darkRed {
+  background: $darkRed;
+}
+
+.bg-yellow {
+  background: $yellow;
+}
+
+.bg-lightGreen {
+  background: $lightGreen;
+}
+
+.text-red {
+  color: $red;
+}
+
+.text-lightRed {
+  color: $lightRed;
+}
+
+.text-darkRed {
+  color: $darkRed;
+}
+
+.text-yellow {
+  color: $yellow;
+}
+
+.text-lightGreen {
+  color: $lightGreen;
+}
+
+/* ------------------- */
+/* Font weights Start          */
+/* ------------------- */
+$fonts-weights: (
+  weights: (
+    400: $fw-400,
+    500: $fw-500,
+    600: $fw-600,
+    700: $fw-700,
+    800: $fw-800,
+    900: $fw-900,
+  ),
+);
+
+@each $fonts-weight, $weights in $fonts-weights {
+  @each $weight, $value in $weights {
+    .fw-#{$value} {
+      font-weight: $value;
+    }
+  }
+}
+
+/* ------------------- */
+/* Font sizes Start          */
+/* ------------------- */
+$font-sizes: (
+  fonts: (
+    "10": $fs-10,
+    "11": $fs-11,
+    "12": $fs-12,
+    "13": $fs-13,
+    "14": $fs-14,
+    "15": $fs-15,
+  ),
+);
+
+@each $fonts-size, $fonts in $font-sizes {
+  @each $font, $value in $fonts {
+    .fs-#{$font} {
+      font-size: $value;
+    }
+  }
+}
+
+/* ------------------- */
+/* Z-index             */
+/* ------------------- */
+$z-indexes: (
+  indexes: (
+    -1: $z-index0,
+    1: $z-index1,
+    2: $z-index2,
+    3: $z-index3,
+    4: $z-index4,
+    5: $z-index5,
+  ),
+);
+
+@each $z-index, $indexes in $z-indexes {
+  @each $index, $value in $indexes {
+    .z-#{$value} {
+      z-index: $value;
+    }
+  }
+}
+
+.title-container {
+  @extend %flexCenter;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 50px;
+
+  > h2 {
+    @extend %titleFontSize;
+
+    font-size: 22px;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 30px;
+    }
+  }
+
+  > p {
+    @extend %subTitleFontsAndBottomStyle;
+  }
+
+  > span {
+    width: 142px;
+    height: 1px;
+    background: $black;
+    margin-top: 20px;
+  }
+}
+
+.btn {
+  min-width: 98px;
+  padding-block: 5px;
+  border-radius: 2px;
+}
+
+.btn-hover {
+  background-color: $primary !important;
+  color: $white !important;
+
+  &:hover {
+    border: 1px solid $primary !important;
+    color: $primary !important;
+    background: $white !important;
+    font-weight: 500;
+  }
+}
+
+.logo {
+  @extend %flexBetween;
+  width: 100%;
+  color: $primary;
+  font-size: rem(30);
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+    width: fit-content;
+  }
+
+  #sideMenu {
+    position: absolute;
+    right: 12px;
+    border: 0;
+    background-color: transparent;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}

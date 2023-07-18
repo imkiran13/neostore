@@ -1,0 +1,63 @@
+
+
+.new-arrivals {
+  .container {
+    .row {
+      div[class*="col-"] {
+        & > div {
+          height: 454px;
+
+          a {
+            color: $white;
+            @include transition(transform, color);
+
+            &:hover {
+              color: $primary;
+
+              @include scale();
+              @include transition(transform, color);
+            }
+          }
+        }
+
+        .sofa-style {
+          @include backgroundImage(sofa-style-2021, png);
+        }
+
+        .perfect-fit {
+          @include backgroundImage(perfect-fit-for-your-home, png);
+        }
+
+        .new-collection {
+          @include backgroundImage(new-collection, png);
+        }
+
+        .sofa-style,
+        .perfect-fit,
+        .new-collection {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          > h2 {
+            font-size: 12px;
+            font-weight: 500;
+            color: $white;
+          }
+
+          > h3 {
+            font-size: 20px;
+            font-weight: 500;
+            color: $white;
+          }
+
+          > a {
+            font-size: 12px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

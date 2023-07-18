@@ -1,0 +1,107 @@
+/* ------------------- */
+/* Font sizes          */
+/* ------------------- */
+$fs-10: 10px;
+$fs-11: 11px;
+$fs-12: 12px;
+$fs-13: 13px;
+$fs-14: 14px;
+$fs-15: 15px;
+$fs-16: 16px;
+
+/* ------------------- */
+/* Font family         */
+/* ------------------- */
+$ff-Gotham: "Gotham";
+
+/* ------------------- */
+/* Colors              */
+/* ------------------- */
+$white: hsl(0, 0%, 100%);
+$primary: hsl(0, 100%, 37%);
+$secondary: hsl(0, 0%, 50%);
+$red: hsl(0, 82%, 51%);
+$lightRed: hsl(0, 99%, 62%);
+$darkRed: hsl(0, 100%, 31%);
+$yellow: hsl(44, 100%, 50%);
+$lightGreen: hsl(129, 43%, 55%);
+
+$gray-300: hsl(0, 0%, 35%);
+$gray-400: hsl(0, 0%, 40%);
+
+$black: hsl(0, 0%, 0%);
+$black-200: hsl(0, 0%, 93%);
+$black-400: hsl(0, 0%, 75%);
+$black-500: hsl(0, 0%, 50%);
+$black-600: hsl(0, 0%, 31%);
+$black-700: hsl(0, 0%, 20%);
+$black-800: hsl(330, 3%, 15%);
+$black-900: hsl(0, 0%, 7%);
+
+/* ------------------- */
+/* Font weight         */
+/* ------------------- */
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+$fw-800: 800;
+$fw-900: 900;
+
+/* ------------------- */
+/* Z-index             */
+/* ------------------- */
+$z-index0: -1;
+$z-index1: 1;
+$z-index2: 2;
+$z-index3: 3;
+$z-index4: 4;
+$z-index5: 5;
+
+/* ------------------- */
+/* Font Path           */
+/* ------------------- */
+$fonts-path: "../fonts" !default;
+
+/* ------------------- */
+/* Image Path          */
+/* ------------------- */
+$images-path: "../../images" !default;
+
+/* ------------------- */
+/* Gotham font         */
+/* ------------------- */
+$gotham-font-path: "../../fonts/Gotham" !default;
+
+/* ------------------- */
+/* Convert px to rem   */
+/* ------------------- */
+$base-rem: 16 !default;
+
+/* ------------------- */
+/* Icomoon             */
+/* ------------------- */
+$icomoon-font-family: "icomoon" !default;
+// $icomoon-font-path: "../icons/icomoon" !default;
+$icomoon-font-path: "../../icons/icomoon" !default;
+
+$icon-close-icon: "\e912";
+$icon-menu-icon: "\e913";
+$icon-half-start: "\e910";
+$icon-full-start: "\e911";
+$icon-Shape-1: "\e90b";
+$icon-Group-2: "\e90c";
+$icon-Vector-2: "\e90d";
+$icon-Vector-1: "\e90e";
+$icon-Vector: "\e90f";
+$icon-table: "\e909";
+$icon-lamp: "\e901";
+$icon-cupboard-path1: "\e902";
+$icon-cupboard-path2: "\e903";
+$icon-cupboard-path3: "\e904";
+$icon-cupboard-path4: "\e905";
+$icon-cupboard-path5: "\e906";
+$icon-cupboard-path6: "\e907";
+$icon-sofa: "\e908";
+$icon-chair: "\e90a";
+$icon-shape: "\e900";

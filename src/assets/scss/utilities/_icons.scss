@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "#{$icomoon-font-family}";
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4n8sxz");
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4n8sxz#iefix")
+      format("embedded-opentype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?4n8sxz")
+      format("truetype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?4n8sxz")
+      format("woff"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?4n8sxz##{$icomoon-font-family}")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "#{$icomoon-font-family}" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close-icon {
+  &:before {
+    content: $icon-close-icon;
+  }
+}
+.icon-menu-icon {
+  &:before {
+    content: $icon-menu-icon;
+  }
+}
+.icon-half-start {
+  &:before {
+    content: $icon-half-start;
+    color: #bfbfbf;
+  }
+}
+.icon-full-start {
+  &:before {
+    content: $icon-full-start;
+    color: #bfbfbf;
+  }
+}
+.icon-Shape-1 {
+  &:before {
+    content: $icon-Shape-1;
+  }
+}
+.icon-Group-2 {
+  &:before {
+    content: $icon-Group-2;
+  }
+}
+.icon-Vector-2 {
+  &:before {
+    content: $icon-Vector-2;
+  }
+}
+.icon-Vector-1 {
+  &:before {
+    content: $icon-Vector-1;
+  }
+}
+.icon-Vector {
+  &:before {
+    content: $icon-Vector;
+    color: #fff;
+  }
+}
+.icon-table {
+  &:before {
+    content: $icon-table;
+    color: #fff;
+  }
+}
+.icon-lamp {
+  &:before {
+    content: $icon-lamp;
+    color: #7f7f7f;
+  }
+}
+.icon-cupboard .path1 {
+  &:before {
+    content: $icon-cupboard-path1;
+    color: rgb(127, 127, 127);
+  }
+}
+.icon-cupboard .path2 {
+  &:before {
+    content: $icon-cupboard-path2;
+    margin-left: -1em;
+    color: rgb(127, 127, 127);
+  }
+}
+.icon-cupboard .path3 {
+  &:before {
+    content: $icon-cupboard-path3;
+    margin-left: -1em;
+    color: rgb(127, 127, 127);
+  }
+}
+.icon-cupboard .path4 {
+  &:before {
+    content: $icon-cupboard-path4;
+    margin-left: -1em;
+    color: rgb(127, 127, 127);
+  }
+}
+.icon-cupboard .path5 {
+  &:before {
+    content: $icon-cupboard-path5;
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-cupboard .path6 {
+  &:before {
+    content: $icon-cupboard-path6;
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+}
+.icon-sofa {
+  &:before {
+    content: $icon-sofa;
+    color: #7f7f7f;
+  }
+}
+.icon-chair {
+  &:before {
+    content: $icon-chair;
+    color: #7f7f7f;
+  }
+}
+.icon-shape {
+  &:before {
+    content: $icon-shape;
+    color: #7f7f7f;
+  }
+}

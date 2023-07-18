@@ -1,0 +1,8 @@
+.container {
+  max-width: 1251px;
+  padding: 0 15px;
+
+  @include media-breakpoint-up(xl) {
+    padding: 0;
+  }
+}

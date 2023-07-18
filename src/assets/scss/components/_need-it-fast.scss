@@ -1,0 +1,110 @@
+.need-it-fast {
+  $needItFast: ".need-it-fast";
+  margin-top: 100px;
+
+  &__right {
+    .card {
+      border: 0;
+      overflow: hidden;
+      border-radius: 0;
+
+      &-body {
+        img {
+          width: 100%;
+          @include transition(transform);
+
+          &:hover {
+            @include scale();
+            @include transition(transform);
+          }
+
+          @include media-breakpoint-up(lg) {
+            height: 309px;
+          }
+        }
+      }
+
+      &-footer {
+        background-color: transparent;
+        border: 0;
+
+        .card-title {
+          margin: 0;
+          color: $black-600;
+          font-size: 20px;
+          font-weight: 700;
+          text-decoration: none;
+          line-height: 24px;
+        }
+
+        .card-text {
+          font-weight: 700;
+          font-size: 14px;
+          color: $black-400;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+
+  &__img-container {
+    position: relative;
+
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__shop-now {
+    position: absolute;
+    top: 104.47px;
+    left: -17px;
+    width: 100%;
+    height: 185.53px;
+    background-image: url(#{$images-path}/need-it-fast-shop-now.png);
+
+    @media (min-width: 450px) {
+      width: 431px;
+    }
+
+    > div {
+      position: relative;
+      top: 41.53px;
+      left: 38px;
+      width: fit-content;
+      color: $white;
+
+      @include media-breakpoint-up(sm) {
+        left: 58px;
+      }
+
+      > p {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      > h2 {
+        font-weight: 500;
+      }
+
+      a {
+        font-weight: 500;
+        font-size: 14px;
+        color: $white;
+        @include transition(transform, color);
+
+        &:hover {
+          color: $black;
+          @include scale();
+          @include transition(transform, color);
+        }
+      }
+    }
+  }
+
+  .corner-design {
+    position: absolute;
+    top: -13px;
+    z-index: -1;
+  }
+}

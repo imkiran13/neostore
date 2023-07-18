@@ -1,0 +1,23 @@
+.bestsellers {
+  margin-bottom: 100px;
+  .container {
+    .row {
+      .heart,
+      .vector-2 {
+        width: 40px;
+        height: 40px;
+        border: 0.1rem solid $black-400;
+        color: $black;
+
+        &:hover {
+          border: none;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.toggleRedColor {
+  color: $red !important;
+}

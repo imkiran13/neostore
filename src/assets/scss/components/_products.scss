@@ -1,0 +1,70 @@
+.products {
+  &__content {
+    display: flex;
+    min-height: 1360px;
+  }
+
+  &__filter {
+    border: 0.1rem solid red;
+    width: 26.65%;
+  }
+
+  &__details {
+    width: 73.34%;
+  }
+
+  &__description {
+    height: 86.304%;
+  }
+
+  &__tabs {
+    @extend %itemCenter;
+    justify-content: end;
+    height: 13.695%;
+  }
+
+  &__detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 82px 5.6%;
+  }
+
+  &__images {
+    width: 29.58%;
+
+    > p {
+      font-weight: 700;
+      line-height: 19px;
+      color: $black-900;
+      margin-top: 12px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 17px;
+
+    > span {
+      color: $black-900;
+      margin-right: 13px;
+    }
+
+    > del {
+      color: $red;
+    }
+  }
+}
+
+.nav-link {
+  width: 43px;
+  height: 43px;
+  color: $black;
+}
+
+.nav-pills .nav-link.active {
+  color: $white;
+  background-color: $red;
+  border-radius: 2px;
+}
