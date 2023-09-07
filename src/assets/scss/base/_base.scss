@@ -33,17 +33,14 @@ blockquote {
   margin: 0;
   font-weight: $fw-400;
 }
-
-li {
-  list-style: none;
+ul{
+  padding-left: 0;
+  list-style-type: none ;
 }
+
 
 img {
   max-width: 100%;
-  width: auto;
-  height: auto;
+  display: block;
 }
 
-.r {
-  border: 1px solid red;
-}

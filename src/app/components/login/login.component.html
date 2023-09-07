@@ -1,23 +1,33 @@
+<app-header></app-header>
 <div class="container login-container">
     <div class="login">
         <h1>NeoSTORE</h1>
 
         <div>
             <img class="login__img" loading="lazy" src="assets/images/login-left.svg" alt="Login" title="Login" />
-            <form>
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
                 <div class="login__form">
                     <h2>Log in</h2>
 
                     <div class="login-field">
                         <div class="login-field__content">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="youremail@address.com"
+                            <input type="email" id="email"  class="form-control" formControlName="email" placeholder="youremail@address.com"
                                 required>
+                                <div *ngIf="loginForm.controls.email.invalid && (loginForm.controls.email.dirty || loginForm.controls.email.touched)" class="text-danger">
+                                    <div *ngIf="loginForm.controls.email.errors?.required">Email is required.</div>
+                                    <div *ngIf="loginForm.controls.email.errors?.email">Please enter a valid email.</div>
+                                  </div>
                         </div>
                         <div class="login-field__content">
                             <label for="Password" class="form-label">Password</label>
-                            <input type="password" id="Password" class="form-control" placeholder="********"
+                            <input type="password" id="Password" formControlName="password" class="form-control" placeholder="********"
                                 required>
+                                <div *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty || loginForm.controls.password.touched)" class="text-danger">
+                                    <div *ngIf="loginForm.controls.password.errors?.required">Password is required.</div>
+                                    <div *ngIf="loginForm.controls.password.errors?.pattern">Password should be alphanumeric and have at least 8 characters.</div>
+                                  </div>
+                                  
                         </div>
                         <a href="javascript:void(0)" class="login-field__forget-password">Forget password</a>
 
@@ -27,10 +37,12 @@
 
                     <span class="login__new-user">
                         New to NeoSTORE?
-                        <a href="javascript:void(0)">Sign up</a>
+                        <a href="javascript:void(0)" [routerLink]="'/signup'">Sign up</a>
                     </span>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+<app-footer></app-footer>

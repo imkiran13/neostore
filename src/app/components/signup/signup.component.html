@@ -3,30 +3,44 @@
       <h1>NeoSTORE</h1>
 
       <div>
-        <img class="login__img" loading="lazy" src="src/images/login-left.svg" alt="Login" title="Login" />
-        <form>
+        <img class="login__img" loading="lazy" src="assets/images/login-left.svg" alt="Login" title="Login" />
+        <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
           <div class="login__form signup__form">
             <h2>Sign up</h2>
 
             <div class="signup-field">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control text-uppercase" id="firstName" placeholder="First Name" />
+                <input type="text" class="form-control text-uppercase" formControlName="firstName" id="firstName" placeholder="First Name" required/>
                 <label for="firstName">First Name</label>
+                <div *ngIf="signupForm.controls.firstName.invalid && (signupForm.controls.firstName.dirty || signupForm.controls.firstName.touched)" class="text-danger">
+                  <div *ngIf="signupForm.controls.firstName.errors?.required">First Name is required.</div>
+                </div>
               </div>
 
               <div class="form-floating mb-3">
-                <input type="text" class="form-control text-uppercase" id="lastName" placeholder="Last Name" />
+                <input type="text" class="form-control text-uppercase" formControlName="lastName" id="lastName" placeholder="Last Name" required/>
                 <label for="lastName">Last Name</label>
+                <div *ngIf="signupForm.controls.lastName.invalid && (signupForm.controls.lastName.dirty || signupForm.controls.lastName.touched)" class="text-danger">
+                  <div *ngIf="signupForm.controls.lastName.errors?.required">Last Name is required.</div>
+                </div>
               </div>
 
               <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="email" placeholder="Email Address" />
+                <input type="email" class="form-control" formControlName="email"  id="email" placeholder="Email Address" required/>
                 <label for="email">Email Address</label>
+                <div *ngIf="signupForm.controls.email.invalid && (signupForm.controls.email.dirty || signupForm.controls.email.touched)" class="text-danger">
+                  <div *ngIf="signupForm.controls.email.errors?.required">Email is required.</div>
+                  <div *ngIf="signupForm.controls.email.errors?.email">Please enter a valid email.</div>
+                </div>
               </div>
 
               <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="password" placeholder="Password" />
+                <input type="password" class="form-control" formControlName="password" id="password" placeholder="Password" required />
                 <label for="password">Password</label>
+                <div *ngIf="signupForm.controls.password.invalid && (signupForm.controls.password.dirty || signupForm.controls.password.touched)" class="text-danger">
+                  <div *ngIf="signupForm.controls.password.errors?.required">Password is required.</div>
+                  <div *ngIf="signupForm.controls.password.errors?.pattern">Password should be alphanumeric and have at least 8 characters.</div>
+                </div>
               </div>
 
               <div class="form-check">
@@ -43,7 +57,7 @@
 
             <span class="login__new-user">
               Already have an account?
-              <a href="javascript:void(0)">Log in</a>
+              <a href="javascript:void(0)" (click)="login()">Log in</a>
             </span>
           </div>
         </form>

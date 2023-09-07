@@ -1,24 +1,27 @@
+@import "scss/utilities/_utilities-dir";
+
+
 .login-container {
-    // @include backgroundImage("login-mobile-bg", "svg");
-    background-image: url(assets/images/login-mobile-bg.svg);
+  background-image: url(../../../assets/images/login-mobile-bg.svg);
+    
   
-    @include tablet {
+    @include media-breakpoint-up(md) {
       background: none;
     }
   }
   
   .login {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding-block: 16px;
   
-    @include tablet {
-      height: auto;
+    @include media-breakpoint-up(md) {
+      min-height: auto;
     }
   
-    @include laptop {
-      height: 100vh;
-      overflow-y: auto;
+    @include media-breakpoint-up(lg) {
+      min-height: calc(100vh - 44px);
+    
     }
   
     &__continue {
@@ -30,11 +33,12 @@
       font-weight: 500;
   
       &:hover {
-        border: 1px solid $white;
-        color: $white;
+        border: 1px solid hsl(0, 100%, 37%) !important;
+        color: hsl(0, 100%, 37%) !important;
+        background: hsl(0, 0%, 100%) !important;
       }
   
-      @include tablet {
+      @include media-breakpoint-up(md) {
         background-color: $primary;
         color: $white;
   
@@ -53,11 +57,11 @@
       letter-spacing: 0.05em;
       color: $white;
   
-      @include tablet {
+      @include media-breakpoint-up(md) {
         color: $primary;
       }
   
-      @include laptop {
+      @include media-breakpoint-up(lg) {
         text-align: start;
       }
     }
@@ -66,13 +70,13 @@
       display: flex;
       align-items: center;
   
-      @include tablet {
+      @include media-breakpoint-up(md) {
         flex-direction: column;
         gap: 30px;
         height: auto;
       }
   
-      @include laptop {
+      @include media-breakpoint-up(lg) {
         flex-direction: row;
         justify-content: space-between;
         gap: 0;
@@ -83,7 +87,7 @@
         display: none;
         margin-inline: auto;
   
-        @include tablet {
+        @include media-breakpoint-up(md) {
           display: block;
         }
       }
@@ -96,7 +100,7 @@
         background: transparent;
         box-shadow: 0 0px 15px 2px rgba($black, 0.06);
   
-        @include tablet {
+        @include media-breakpoint-up(md) {
           min-width: 451px;
           background: $white;
         }
@@ -107,7 +111,7 @@
           justify-content: space-between;
           min-height: 428px;
   
-          @include tablet {
+          @include media-breakpoint-up(md) {
             min-width: 372px;
             flex: 0;
           }
@@ -120,7 +124,7 @@
             line-height: 23px;
             text-transform: uppercase;
   
-            @include tablet {
+            @include media-breakpoint-up(md) {
               color: $red;
             }
           }
@@ -134,7 +138,7 @@
                 color: $white;
                 margin-bottom: 12px;
   
-                @include tablet {
+                @include media-breakpoint-up(md) {
                   color: $gray-400;
                 }
               }
@@ -154,7 +158,7 @@
                   line-height: 20px;
                   color: $black-700;
   
-                  @include tablet {
+                  @include media-breakpoint-up(md) {
                     color: hsl(0, 3%, 43%);
                   }
                 }
@@ -172,7 +176,7 @@
               color: $white;
               float: right;
   
-              @include tablet {
+              @include media-breakpoint-up(md) {
                 color: $gray-300;
               }
   
@@ -181,7 +185,7 @@
                 @include scale();
                 @include transition(transform, color);
   
-                @include tablet {
+                @include media-breakpoint-up(md) {
                   color: $primary;
                 }
               }
@@ -197,7 +201,7 @@
       line-height: 17px;
       color: $white;
   
-      @include tablet {
+      @include media-breakpoint-up(md) {
         color: $black-600;
       }
   
@@ -207,7 +211,7 @@
         line-height: 19px;
         color: $white;
   
-        @include tablet {
+        @include media-breakpoint-up(md) {
           color: $black-600;
         }
   
@@ -216,7 +220,7 @@
           @include scale();
           @include transition(transform, color);
   
-          @include tablet {
+          @include media-breakpoint-up(md) {
             color: $primary;
           }
         }

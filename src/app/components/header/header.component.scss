@@ -1,0 +1,49 @@
+@import "scss/utilities/_utilities-dir";
+$header: ".header";
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  &__primary {
+    background-color: $primary;
+
+    .container {
+      padding-block: 12.4px;
+
+      > div {
+        @extend %flexCenter;
+
+        #{$header}__markdown {
+          margin: 0;
+          color: $white;
+          text-align: center;
+          font-weight: 700;
+
+          > a {
+            color: $white;
+            @include transition(transform, color);
+
+            &:hover {
+              color: $black;
+              @include scale();
+              @include transition(transform, color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+ 
+}
+
+.icon-menu-icon:before {
+  color: $primary;
+}
+
+.icon-close-icon:before {
+  font-size: rem(24);
+  color: $white;
+}

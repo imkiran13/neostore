@@ -1,3 +1,6 @@
+:root{
+    --bs-primary-rgb: 187, 1, 0 !important;
+}
 /* ------------------- */
 /* Font sizes          */
 /* ------------------- */
@@ -71,7 +74,8 @@ $images-path: "../../images" !default;
 /* ------------------- */
 /* Gotham font         */
 /* ------------------- */
-$gotham-font-path: "../../fonts/Gotham" !default;
+$gotham-font-path: "../../fonts/gotham" !default;
+
 
 /* ------------------- */
 /* Convert px to rem   */
@@ -82,7 +86,6 @@ $base-rem: 16 !default;
 /* Icomoon             */
 /* ------------------- */
 $icomoon-font-family: "icomoon" !default;
-// $icomoon-font-path: "../icons/icomoon" !default;
 $icomoon-font-path: "../../icons/icomoon" !default;
 
 $icon-close-icon: "\e912";

@@ -1,0 +1,35 @@
+@import "scss/utilities/_utilities-dir";
+.bestsellers {
+    margin-bottom: 100px;
+    .container {
+      .row {
+        .card-text{
+          display: flex;
+          gap: 4px;
+        }
+        .card-reactions{
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          .heart,
+          .vector-2 {
+            width: 40px;
+            height: 40px;
+            border: 0.1rem solid $black-400;
+            color: $black;
+    
+            &:hover {
+              border: none;
+              color: $primary;
+            }
+          }
+        }
+        
+      }
+    }
+  }
+  
+  .toggleRedColor {
+    color: $red !important;
+  }
+  

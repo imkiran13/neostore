@@ -1,0 +1,40 @@
+@import "scss/utilities/_utilities-dir";
+.furniture-for-every-budget {
+    .container {
+      .row {
+        [class*="col-"] {
+          .card {
+            border: 0;
+            overflow: hidden;
+            border-radius: 0;
+  
+            a {
+              img {
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+  
+                @include transition(transform);
+  
+                &:hover {
+                  @include scale();
+                  @include transition(transform);
+                }
+              }
+            }
+  
+            &-body {
+              @extend %flexBetween;
+              flex-direction: column;
+              background-color: $black-200;
+  
+              button {
+                width: 145px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
